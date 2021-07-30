@@ -1,0 +1,104 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: $whiteFont;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+
+    &__name {
+      display: flex;
+      .animate-letters {
+        display: flex;
+        margin-right: 1vw;
+        font-size: 1.5rem;
+        overflow: hidden;
+      }
+    }
+    &__title {
+      font-size: 1.2rem;
+      padding-left: 8vw;
+      & span:nth-child(1) {
+        margin-right: 0.5rem;
+      }
+      & span:nth-child(2) {
+        color: $redProjects;
+      }
+      & span:nth-child(3) {
+        color: $greenContact;
+      }
+    }
+    &__description {
+      padding: 2vh;
+    }
+  }
+  &__right {
+    & img {
+      width: 70vw;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .banner {
+    flex-direction: row;
+    justify-content: center;
+    &__left {
+      width: 50vw;
+
+      &__name {
+        .animate-letters {
+          margin-right: 1vw;
+          font-size: 2.5rem;
+        }
+      }
+      &__title {
+        font-size: 2rem;
+        padding-left: 4vw;
+      }
+      &__description {
+        padding: 2vh;
+        font-size: 1.5rem;
+      }
+    }
+    &__right {
+      & img {
+        width: 30vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    flex-direction: row;
+    justify-content: center;
+    &__left {
+      width: 50vw;
+
+      &__name {
+        .animate-letters {
+          margin-right: 1vw;
+          font-size: 3.5rem;
+        }
+      }
+      &__title {
+        font-size: 2rem;
+        padding-left: 12vw;
+      }
+      &__description {
+        padding: 4vh;
+        font-size: 1.5rem;
+      }
+    }
+    &__right {
+      & img {
+        width: 22vw;
+      }
+    }
+  }
+}

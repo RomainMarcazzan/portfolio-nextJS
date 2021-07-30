@@ -1,0 +1,29 @@
+body,
+html {
+  user-select: none;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $blackHome;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  font-family: "Bai Jamjuree", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: $blackHome;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}

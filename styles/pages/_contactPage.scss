@@ -1,0 +1,63 @@
+.contactPage {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: $greenContact;
+
+  &__info {
+    position: absolute;
+    height: 30vh;
+    top: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    &__email {
+      color: black;
+      & a {
+        text-decoration: none;
+      }
+    }
+    &__address {
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__social {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100vw;
+      cursor: pointer;
+      svg {
+        width: 30px;
+        overflow: visible;
+
+        &:hover {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .contactPage {
+    &__info {
+      top: 75vh;
+      height: 25vh;
+      &__social {
+        width: 30vw;
+        svg {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
