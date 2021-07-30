@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const NavBar = ({ isShown }) => {
+const NavBar = () => {
   const menu = [
     { title: "Home", path: "/" },
     { title: "Profil", path: "/about" },

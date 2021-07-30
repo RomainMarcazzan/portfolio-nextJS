@@ -11,20 +11,8 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{
-        delay: 0.4,
-        type: "spring",
-        mass: 0.35,
-        stiffness: 75,
-        duration: 0.3,
-      }}
-      className="contactPage"
-    >
-      <NavBar isShown />
+    <div className="contactPage">
+      <NavBar />
       {devise && (
         <Canvas style={{ cursor: "grab" }}>
           <directionalLight intensity={1} />
@@ -124,7 +112,7 @@ const ContactPage = () => {
           </svg>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

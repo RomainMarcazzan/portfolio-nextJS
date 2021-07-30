@@ -34,18 +34,7 @@ const ProjectsPage = () => {
   });
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{
-        type: "spring",
-        mass: 0.35,
-        stiffness: 75,
-        duration: 0.3,
-      }}
-      className="projectsPage"
-    >
+    <div className="projectsPage">
       <NavBar />
       <div className="projectsPage__container">
         <div className="projectsPage__container__top">
@@ -88,7 +77,7 @@ const ProjectsPage = () => {
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
