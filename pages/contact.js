@@ -1,16 +1,16 @@
-import React, { Suspense, useEffect, useState } from "react";
+import {} from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
-import Model from "../utils/scene";
 import NavBar from "../components/NavBar";
-import { OrbitControls, Center, Text } from "@react-three/drei";
+import dynamic from "next/dynamic";
 
 const ContactPage = () => {
-  const [devise, setDevise] = useState(null);
-  useEffect(() => {
-    setDevise(window.innerWidth);
-  }, []);
+  const DynamicComponentWithNoSSR = dynamic(
+    () => import("../components/Canvas3D"),
+    {
+      ssr: false,
+    }
+  );
 
   return (
     <div>
@@ -25,38 +25,7 @@ const ContactPage = () => {
 
       <main className="contactPage">
         <NavBar />
-        {devise && (
-          <Canvas style={{ cursor: "grab" }}>
-            <directionalLight intensity={1} />
-            <pointLight color="white" position={[0, 0, 2]} intensity={1} />
-            <ambientLight intensity={1} />
-            <Suspense fallback={null}>
-              <Center>
-                <Model
-                  className="contactPage__phone"
-                  scale={devise <= 768 ? [8, 8, 8] : [12, 12, 12]}
-                  rotation={[0, -1.2, 0]}
-                />
-              </Center>
-            </Suspense>
-
-            <OrbitControls
-              enablePan={true}
-              enableZoom={false}
-              enableRotate={true}
-            />
-            <Text
-              color="white"
-              anchorX="center"
-              anchorY="middle"
-              fontSize={devise <= 768 ? "0.3" : "0.4"}
-              position={[0, 2, 0]}
-              rotation={[0, 0, 0]}
-            >
-              +262 (0)6.92.25.32.94
-            </Text>
-          </Canvas>
-        )}
+        <DynamicComponentWithNoSSR />
 
         <div className="contactPage__info">
           <motion.div
