@@ -1,6 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
+import Head from "next/head";
 
 const AboutPage = () => {
   const animate = {
@@ -17,44 +17,55 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="aboutPage">
-      <NavBar />
-      <div className="aboutPage__container">
-        <motion.div
-          initial={{ x: 100 }}
-          animate={animate}
-          drag
-          dragConstraints={dragConstraints}
-          dragElastic={1}
-          className="aboutPage__card"
-        >
-          BACKEND: Express, Sequelize, MySql, MongoDb, Firebase...
-        </motion.div>
-        <motion.div
-          initial={{ y: 200, x: -100 }}
-          animate={animate}
-          drag
-          dragConstraints={dragConstraints}
-          dragElastic={1}
-          className="aboutPage__card"
-        >
-          Je suis développeur, diplômé Bac+2, basé à Saint Denis de la Réunion.
-          J'utilise des technologies JavaScript modernes pour la création de
-          sites web et applications mobiles. N'hésitez pas à me contacter pour
-          parler de votre projet.
-        </motion.div>
-        <motion.div
-          initial={{ x: 100 }}
-          animate={animate}
-          drag
-          dragConstraints={dragConstraints}
-          dragElastic={1}
-          className="aboutPage__card"
-        >
-          FRONTEND: React, Redux, Context Api, hooks, React-Native, Sass,
-          ThreeJS...
-        </motion.div>
-      </div>
+    <div>
+      <Head>
+        <title>Romain Marcazzan | Développeur Freelance</title>
+        <meta
+          name="description"
+          content="Développeur fullstack Web et applications mobiles Freelance React, React Native, Next JS, NodeJS"
+        />
+        <link rel="icon" href="/rm.ico" />
+      </Head>
+
+      <main className="aboutPage">
+        <NavBar />
+        <div className="aboutPage__container">
+          <motion.div
+            initial={{ x: 100 }}
+            animate={animate}
+            drag
+            dragConstraints={dragConstraints}
+            dragElastic={1}
+            className="aboutPage__card"
+          >
+            BACKEND: Express, Sequelize, MySql, MongoDb, Firebase...
+          </motion.div>
+          <motion.div
+            initial={{ y: 200, x: -100 }}
+            animate={animate}
+            drag
+            dragConstraints={dragConstraints}
+            dragElastic={1}
+            className="aboutPage__card"
+          >
+            Je suis développeur, diplômé Bac+2, basé à Saint Denis de la
+            Réunion. J'utilise des technologies JavaScript modernes pour la
+            création de sites web et applications mobiles. N'hésitez pas à me
+            contacter pour parler de votre projet.
+          </motion.div>
+          <motion.div
+            initial={{ x: 100 }}
+            animate={animate}
+            drag
+            dragConstraints={dragConstraints}
+            dragElastic={1}
+            className="aboutPage__card"
+          >
+            FRONTEND: React, Redux, Context Api, hooks, React-Native, Sass,
+            ThreeJS...
+          </motion.div>
+        </div>
+      </main>
     </div>
   );
 };
