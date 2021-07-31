@@ -73,7 +73,9 @@ const ContactPage = () => {
             animate={{ x: 0, transition: { duration: 0.5 } }}
             className="contactPage__info__address"
           >
-            <span>30 rue de l'Abattoir</span>
+            <span>
+              30 rue de l<span>{"'"}</span>Abattoir
+            </span>
             <span>97400 Saint Denis</span>
             <span>La Réunion</span>
           </motion.div>

@@ -49,9 +49,10 @@ const AboutPage = () => {
             className="aboutPage__card"
           >
             Je suis développeur, diplômé Bac+2, basé à Saint Denis de la
-            Réunion. J'utilise des technologies JavaScript modernes pour la
-            création de sites web et applications mobiles. N'hésitez pas à me
-            contacter pour parler de votre projet.
+            Réunion. J<span>{"'"}</span>utilise des technologies JavaScript
+            modernes pour la création de sites web et applications mobiles. N
+            <span>{"'"}</span>hésitez pas à me contacter pour parler de votre
+            projet.
           </motion.div>
           <motion.div
             initial={{ x: 100 }}
