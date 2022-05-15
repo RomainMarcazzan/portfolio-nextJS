@@ -42,6 +42,7 @@
       }
       &--overlay {
         background-color: $redProjects;
+        z-index: 1000;
         position: absolute;
         top: 0;
         left: 0;
@@ -51,7 +52,7 @@
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 770px) {
   .projectsPage {
     &__container {
       align-items: inherit;

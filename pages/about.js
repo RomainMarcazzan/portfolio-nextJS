@@ -19,10 +19,10 @@ const AboutPage = () => {
   return (
     <div>
       <Head>
-        <title>Romain Marcazzan | Développeur Freelance</title>
+        <title>Romain Marcazzan | Développeur Freelance | Profil</title>
         <meta
           name="description"
-          content="Développeur fullstack Web et applications mobiles Freelance React, React Native, Next JS, NodeJS"
+          content="Développeur fullstack Web et applications mobiles Freelance basé à l'île de la Réunion (React, React Native, Next JS, NodeJS)"
         />
         <link rel="icon" href="/rm.ico" />
       </Head>
@@ -62,8 +62,8 @@ const AboutPage = () => {
             dragElastic={1}
             className="aboutPage__card"
           >
-            FRONTEND: React, Redux, Context Api, hooks, React-Native, Sass,
-            ThreeJS...
+            FRONTEND: React, NextJs, Redux, Context Api, hooks, React-Native,
+            Sass, ThreeJS...
           </motion.div>
         </div>
       </main>

@@ -2,7 +2,6 @@ import React from "react";
 import AnimateLetters from "./AnimateLetters";
 import { motion } from "framer-motion";
 import portrait from "../public/assets/images/portrait.png";
-import Image from "next/image";
 
 const Banner = () => {
   return (
@@ -43,7 +42,7 @@ const Banner = () => {
         }}
         className="banner__right"
       >
-        <Image src={portrait} alt="portrait" />
+        <img src={portrait} alt="portrait" />
       </motion.div>
     </motion.div>
   );
